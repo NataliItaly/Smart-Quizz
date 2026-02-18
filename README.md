@@ -7,6 +7,6 @@ Progress and history of attempts are saved in localStorage.
 Explain mistake mode with AI
 
 Team members:
-Nataliya Krylova [Git Hub](https://github.com/NataliItaly)
-Kateryna Moskalenko [Git Hub](https://github.com/katerynamoskalenko)
-Daria Pusovskaya [Git Hub](https://github.com/dariapusovskaya)
+- Nataliya Krylova [Git Hub](https://github.com/NataliItaly)
+- Kateryna Moskalenko [Git Hub](https://github.com/katerynamoskalenko)
+- Daria Pusovskaya [Git Hub](https://github.com/dariapusovskaya)

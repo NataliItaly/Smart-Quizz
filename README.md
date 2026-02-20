@@ -1,5 +1,5 @@
-# Smart-Quizz
-Smart-Quizz RSSchool Final Project Auto Team 7
+# Smart-Quiz
+Smart-Quiz RSSchool Final Project Auto Team 7
 
 The app represent a quizz with questions on HTML, CSS, JS topics. 
 User can select questions depending on the dificulty level and topic. 

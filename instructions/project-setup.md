@@ -55,10 +55,15 @@
 Объяснение:
 
 vite -	сборщик
+
 typescript -	типизация
+
 eslint -	проверка кода
+
 prettier -	форматирование
+
 husky	git hooks - запускает ESLint перед каждым коммитом, что предотвращает добавление кода с ошибками в репозиторий
+
 @typescript-eslint -	интеграция ESLint + TS
 
 
@@ -67,22 +72,27 @@ husky	git hooks - запускает ESLint перед каждым коммит
 
 tsconfig.json:
 
-- =="target": "ES2020"== - код компилируется в стандарт ES2020.
-- =="module": "ESNext"== - используем современную систему модулей:
-`import ...`
-`export ...`
+- `"target": "ES2020"` - код компилируется в стандарт ES2020.
+- `"module": "ESNext"` - используем современную систему модулей:
+  
+  `import ...`
 
-- =="lib": ["ES2020", "DOM"]==
+  `export ...`
+
+- `"lib": ["ES2020", "DOM"]`
 ES2020 → стандарт JS
+
 DOM → работа с document, window и браузером
+
 Без "DOM" TypeScript ругался бы на: `document.getElementById(...)`
 
-- =="moduleResolution": "bundler"== - Разрешает модули так, как это делает сборщик (Vite)
+- `"moduleResolution": "bundler"` - Разрешает модули так, как это делает сборщик (Vite)
 
-- =="resolveJsonModule": true== Позволяет делать:
+- `"resolveJsonModule": true` Позволяет делать:
+  
 `import questions from './data/questions.json';`
 
-- =="noEmit": true== - TypeScript не создаёт .js файлы, потому что компиляцией занимается Vite.
+- `"noEmit": true` - TypeScript не создаёт .js файлы, потому что компиляцией занимается Vite.
 TS только проверяет типы.
 
 - Включает максимально строгую типизацию:
@@ -94,11 +104,12 @@ TS только проверяет типы.
   "noFallthroughCasesInSwitch": true
   ```
 
-      - ==strict: true== - строгий режим,
-      - ==noImplicitAny: true== - тип any запрещен
-      - ==noUnusedLocals== - запрет на неиспользуемые переменные
-      - ==noUnusedParameters== запрет лишних аргументов в функциях
-      - ==noFallthroughCasesInSwitch== - срабатывает тогда, когда в case нет break, return, throw или другого завершения — и выполнение «проваливается» в следующий case.
+      - `strict: true` - строгий режим,
+      - `noImplicitAny: true` - тип any запрещен
+      - `noUnusedLocals` - запрет на неиспользуемые переменные
+      - `noUnusedParameters` запрет лишних аргументов в функциях
+      - `noFallthroughCasesInSwitch` - срабатывает тогда, когда в case нет break, return, throw или другого завершения — и выполнение «проваливается» в следующий case.
+  
       если fallthrough сделан намеренно, можно написать комментарий:
 
       ```case 1:
@@ -110,7 +121,7 @@ TS только проверяет типы.
       ```
       *TypeScript это допускает, если есть специальный комментарий.*
 
-      - =="include": ["src"]== - TypeScript проверяет только папку src.
+      - `"include": ["src"]` - TypeScript проверяет только папку src.
 
 
 ## Конфигурация ESLint
@@ -119,8 +130,8 @@ TS только проверяет типы.
 - добавляет дополнительные строгие проверки
 
 #### Импорты
-- ==import tseslint from "@typescript-eslint/eslint-plugin"==; - позволяет ESLint понимать TypeScript
-- ==import parser from "@typescript-eslint/parser"==; - содержит правила для TS
+- `import tseslint from "@typescript-eslint/eslint-plugin"`; - позволяет ESLint понимать TypeScript
+- `import parser from "@typescript-eslint/parser"`; - содержит правила для TS
 Без parser ESLint не сможет анализировать .ts файлы.
 
 #### Экспорт конфигурации
@@ -152,6 +163,7 @@ TS только проверяет типы.
 `...tseslint.configs["recommended-type-checked"].rules`,
 
 recommended - Базовые правила для TypeScript.
+
 recommended-type-checked - Правила, которые требуют анализа типов
 работают только если указан project
 

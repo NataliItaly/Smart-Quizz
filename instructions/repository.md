@@ -72,5 +72,5 @@ main будет содержать только финальные релизы.
 
 ## Разработка
 
-Вся разработка ведется в ветке development.
+Вся разработка ведется в ветке development. [См. development.md](https://github.com/NataliItaly/Smart-Quiz/blob/main/instructions/development.md)
 
